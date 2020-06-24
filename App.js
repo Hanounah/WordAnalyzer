@@ -8,7 +8,7 @@ export default class App extends Component {
     super();
     this.state={
       word:' ',
-     // char_length:0,
+      char_length:0,
       vowel:0,
       const1:0,
      }
@@ -18,9 +18,10 @@ export default class App extends Component {
     let const1=0,vowel=0,char=0;
     let word=this.state.word;
     
-    char=word.length;
-    for(var i=0;i<word.length;i++){
-      let alphabet=word[i].toUpperCase();
+    var input=word.split("");
+    char=input.length;
+    for(var i=0;i<input.length;i++){
+      let alphabet=input[i].toUpperCase();
       if(alphabet=='A' || alphabet=='E' || alphabet=='I' || alphabet=='O' || alphabet=='U')
         vowel++;
       else
